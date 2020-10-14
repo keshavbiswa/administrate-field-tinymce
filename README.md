@@ -34,7 +34,7 @@ ATTRIBUTE_TYPES = [
 Or with options:
 ```ruby
 ATTRIBUTE_TYPES = [
-  bars: Field::Ckeditor.with_options({ ckeditor: { uiColor: '#800000' }}),
+  bars: Field::Tinymce.with_options(rows: 100, columns: 100),
 ]
 ```
 
