@@ -1,40 +1,36 @@
 # Administrate::Field::Tinymce
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/administrate/field/tinymce`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'administrate-field-tinymce'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install administrate-field-tinymce
+A plugin for adding [TinyMCE] support in [Administrate].
 
 ## Usage
 
-TODO: Write usage instructions here
+Add [tinymce-rails] and administrate-field-tinymce to your `Gemfile`:
 
-## Development
+```ruby
+gem "tinymce-rails"
+gem "administrate-field-tinymce", "~> 0.0.1"
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Run:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```bash
+$ bundle install
+```
 
-## Contributing
+Add require javascripts to your manifest.js
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/administrate-field-tinymce.
+```
+//= link administrate-field-tinymce/application.js
+```
+	
+	
+Add to your `FooDashboard`:
+```ruby
+ATTRIBUTE_TYPES = [
+  bars: Field::Tinymce,
+]
+```
 
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+[TinyMce]: https://github.com/tinymce/tinymce
+[Administrate]: https://github.com/thoughtbot/administrate
+[tinymce-rails]: https://github.com/spohlenz/tinymce-rails
