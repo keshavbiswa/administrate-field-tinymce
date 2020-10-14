@@ -11,6 +11,14 @@ module Administrate
       def to_s
         data
       end
+
+      def rows
+        options.fetch(:rows, 40)
+      end
+
+      def columns
+        options.fetch(:columns, 120)
+      end
     end
   end
 end
