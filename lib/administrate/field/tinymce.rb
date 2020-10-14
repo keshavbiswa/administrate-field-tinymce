@@ -1,10 +1,16 @@
-require "administrate/field/tinymce/version"
+require 'administrate/field/base'
+require 'rails'
 
 module Administrate
   module Field
-    module Tinymce
-      class Error < StandardError; end
-      # Your code goes here...
+    class Tinymce < Administrate::Field::Base
+      class Engine < ::Rails::Engine
+        Administrate::Engine.add_javascript 'administrate-field-tinymce/application'
+      end
+
+      def to_s
+        data
+      end
     end
   end
 end
