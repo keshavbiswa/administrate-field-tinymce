@@ -31,6 +31,13 @@ ATTRIBUTE_TYPES = [
 ]
 ```
 
+Or with options:
+```ruby
+ATTRIBUTE_TYPES = [
+  bars: Field::Tinymce.with_options(rows: 100, columns: 100),
+]
+```
+
 [TinyMce]: https://github.com/tinymce/tinymce
 [Administrate]: https://github.com/thoughtbot/administrate
 [tinymce-rails]: https://github.com/spohlenz/tinymce-rails
